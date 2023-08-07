@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    background-color: gray;
+}
+
+
+
+/* Container */
+.container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1175px;
+}
+
+
+/* Header */
+.header {
+    background-color: #f3f3f3;
+    margin-bottom: 15px;
+}
+
+.nav {
+
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.table__content {
+    background-color: #f4f4f4;
+    
+}
+
+table {
+    width: 100%;
+    text-align: center;
+}
+
+.some_div {
+    text-align: center;
+}
