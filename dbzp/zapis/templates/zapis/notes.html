@@ -1,0 +1,31 @@
+{% extends 'zapis/base.html' %}
+{% block content %}
+    <div class="container">
+        <div class="table__content">
+            <table border="1" class="table">
+                <tr>
+                    <th>Название дисциплины</th>
+                    <th>Преподаватель</th>
+                    <th>Дата</th>
+                    <th>Время</th>
+                    <th>Аудитория</th>
+                    <th>Свободных мест</th>
+                    <th>Запись</th>
+                </tr>
+                {% for i in note %}
+                {% if i.places != 0 %}
+                <tr>
+                    <td>{{i.discipline}}</td>
+                    <td>{{i.discipline.tutor}}</td>
+                    <td>{{i.date_note}}</td>
+                    <td>{{i.time_note}}</td>
+                    <td>а.{{i.auditor}} к.{{i.korpus}}</td>
+                    <td>{{i.places}}</td>
+                    <td><a href="{% url 'add_talon' i.id %}">Запись</a></td>
+                </tr>
+                {% endif %}
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+{% endblock %}

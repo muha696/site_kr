@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запись на защиту курсовых</title>
+    <link rel="stylesheet" href="{% static 'zapis/style.css' %}">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="{% url 'main' %}" class="nav__link">Просмостр дисциплин</a>
+                <a href="{% url 'adddisc' %}" class="nav__link">Добавить дисцпилину</a>
+                <a href="{% url 'notes' %}" class="nav__link">Просмостр записей</a>
+                <a href="{% url 'add_note' %}" class="nav__link">Добавить запись</a>
+                <a href="{% url 'student_list' %}" class="nav__link">Просмотр записей студентов</a>
+            </nav>
+        </div>
+    </header>
+
+    {% block content %}
+
+    {% endblock %}
+
+    
+</body>
+</html>

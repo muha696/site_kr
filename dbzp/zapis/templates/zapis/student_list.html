@@ -1,0 +1,29 @@
+{% extends 'zapis/base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <div class="table__content">
+        <table border="1" class="table">
+            <tr>
+                <th>Название дисциплины</th>
+                <th>Дата</th>
+                <th>Время</th>
+                <th>Аудитория</th>
+                <th>ФИО студентов</th>
+            </tr>
+            {% for i in note %}
+            <tr>
+                <td>{{i.discipline_note.discipline}}</td>
+                <td>{{i.discipline_note.date_note}}</td>
+                <td>{{i.discipline_note.time_note}}</td>
+                <td>а.{{i.discipline_note.auditor}} к.{{i.discipline_note.korpus}}</td>
+                <td>{{i.surname}} {{i.name}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+
+
+{% endblock %}

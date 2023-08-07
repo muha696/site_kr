@@ -1,0 +1,24 @@
+{% extends 'zapis/base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="table__content">
+            <table border="1" class="table">
+                <tr>
+                    <th>ID</th>
+                    <th>Название дисциплины</th>
+                    <th>Преподаватель</th>
+                </tr>
+                {% for i in disc %}
+                <tr>
+                    <td>{{i.id}}</td>
+                    <td>{{i.disc_name}}</td>
+                    <td>{{i.tutor}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+{% endblock %}
+</body>
+</html>
